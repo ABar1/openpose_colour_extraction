@@ -1,7 +1,7 @@
 # Image Processing By Pose
 
 ## Description
-*Image Processing By Pose* is a ROS package that uses RGB camera to detect and track humans. Capable of assigning ids to the detected people while being designed to handle total, ocasional obscurities. It is also a usefull tool for drawing skeleton lines, given the detected points by openpose.
+*Image Processing By Pose* is a ROS package that uses RGB camera to detect and track humans. Capable of assigning ids to the detected people while being designed to handle total, ocasional obscurities. It is also a usefull tool for drawing skeleton lines, given the detected points by openpose. This project was created during my intership at IIT Democritos. 
 
 
 ### Files Included:
