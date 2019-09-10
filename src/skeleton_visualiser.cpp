@@ -145,6 +145,7 @@ class ImageConverter
   std::vector<cv::Point> *oldHumanPlaces = new std::vector<cv::Point>;
   std::vector<cv::Point> *newHumanPlaces = new std::vector<cv::Point>;
 
+ 
   
 
 public:
@@ -237,6 +238,7 @@ public:
     }
     return mask;
   }
+  
 
   cv::Mat HSHistogramAndDraw(const cv::Mat &mask)
   {
@@ -578,6 +580,7 @@ public:
       }
       std::cout << "\n\nFound Max value: " << max << "  at position: " << maxPosRaw << ", " << maxPosCol << "\n\n";
 
+      
       //Delete the raw we took into acount. We need this because otherwise there is the posibility of mathcing the old id to two different
       // new ids. We want the mapping to be 1-1. Similarly, we have to erase the posibility of mapping two rows to one column (two old ids
       // into one new id).
@@ -699,6 +702,7 @@ public:
     //We want to store the "new" histograms so as to compare them with the dissapeared ones later.
     
 
+    //The following lines are a different and more complex implementation of the above utility. This implementation dose not produce good results.
     /*
     
 
@@ -818,6 +822,8 @@ public:
     }
 
     */
+    
+    
     tracking_ids.clear();
     tracking_ids = newIds;
     for( auto l : tracking_ids){
